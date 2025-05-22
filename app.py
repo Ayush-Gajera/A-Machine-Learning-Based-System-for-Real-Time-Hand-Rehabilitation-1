@@ -141,7 +141,7 @@ def provide_feedback_Ball_Grip_Wrist_Down(landmarks):
         feedback.append("Index and middle fingers are correctly positioned.")
 
     # feedback on the position of middle and ring fingers
-    if distance_middle_to_ring_tip < 0.02:
+    if distance_middle_to_ring_tip < 0.021:
         feedback.append("Middle and ring fingers are too close.")
     elif distance_middle_to_ring_tip > 0.05:
         feedback.append("Middle and ring fingers are too far apart.")
@@ -151,7 +151,7 @@ def provide_feedback_Ball_Grip_Wrist_Down(landmarks):
     # feedback on the position of ring and pinky fingers
     if distance_ring_to_pinky_tip < 0.02:
         feedback.append("Ring and pinky fingers are too close.")
-    elif distance_ring_to_pinky_tip > 0.05:
+    elif distance_ring_to_pinky_tip > 0.051:
         feedback.append("Ring and pinky fingers are too far apart.")
     else:
         feedback.append("Ring and pinky fingers are correctly positioned.")
@@ -196,13 +196,13 @@ def provide_feedback_Ball_Grip_Wrist_UP(landmarks):
     # feedback on the position of index and middle fingers
     if distance_index_to_middle_tip < 0.02:
         feedback.append("Index and middle fingers are too close.")
-    elif distance_index_to_middle_tip > 0.05:
+    elif distance_index_to_middle_tip > 0.051:
         feedback.append("Index and middle fingers are too far apart.")
     else:
         feedback.append("Index and middle fingers are correctly positioned.")
 
     # feedback on the position of middle and ring fingers
-    if distance_middle_to_ring_tip < 0.02:
+    if distance_middle_to_ring_tip < 0.021:
         feedback.append("Middle and ring fingers are too close.")
     elif distance_middle_to_ring_tip > 0.05:
         feedback.append("Middle and ring fingers are too far apart.")
@@ -288,13 +288,13 @@ def provide_feedback_Thumb_Extend(landmarks):
         feedback.append("Good distance maintained between thumb center and base of index finger.")
 
     # Feedback for thumb IP to middle MCP
-    if thumb_ip_to_middle_mcp_distance >= 0.065:  # Threshold for sufficient thumb extension
+    if thumb_ip_to_middle_mcp_distance >= 0.0651:  # Threshold for sufficient thumb extension
         feedback.append("Thumb center is far from the middle finger base; try to move it closer.")
     else:
         feedback.append("Good thumb center position relative to the middle finger base.")
 
     # Feedback for thumb IP to ring MCP
-    if thumb_ip_to_ring_mcp_distance >= 0.095:  # Threshold for sufficient thumb extension
+    if thumb_ip_to_ring_mcp_distance >= 0.0951:  # Threshold for sufficient thumb extension
         feedback.append("Thumb center is far from the ring finger base; try to move it closer.")
     else:
         feedback.append("Good thumb center position relative to the ring finger base.")
